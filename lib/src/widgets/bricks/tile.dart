@@ -44,10 +44,10 @@ class DayTileWidget extends StatelessWidget {
   final ValueChanged<DateTime>? onTap;
 
   /// The radius of the day tile.
-  final BorderRadius radius;
+  final BorderRadiusGeometry radius;
 
   /// The radius of the day tile's background.
-  final BorderRadius backgroundRadius;
+  final BorderRadiusGeometry backgroundRadius;
 
   @override
   Widget build(BuildContext context) {
