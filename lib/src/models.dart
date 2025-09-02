@@ -22,8 +22,7 @@ class DateRange {
 
   /// Returns whether the date range contains the given [date] or not.
   bool contains(DateTime date) {
-    return (date.isAtSameMomentAs(start) || date.isAfter(start)) &&
-        (date.isAtSameMomentAs(end) || date.isBefore(end));
+    return (date.isAtSameMomentAs(start) || date.isAfter(start)) && (date.isAtSameMomentAs(end) || date.isBefore(end));
   }
 
   @override
@@ -148,8 +147,7 @@ class CalendarTheme {
       ),
       this.quickDateRangeBackgroundColor,
       this.monthTextStyle,
-      this.dayNameTextStyle =
-          const TextStyle(color: Colors.black45, fontSize: 10),
+      this.dayNameTextStyle = const TextStyle(color: Colors.black45, fontSize: 10),
       required this.radius,
       required this.tileSize,
       this.selectedQuickDateRangeColor,

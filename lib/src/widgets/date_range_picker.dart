@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_date_range_picker/flutter_date_range_picker.dart';
+import 'package:intl/intl.dart';
 
 /// The default [CalendarTheme] used by the date range picker.
 const CalendarTheme kTheme = CalendarTheme(
@@ -23,6 +24,7 @@ const CalendarTheme kTheme = CalendarTheme(
 /// * [theme] - The theme to apply to the day tile.
 /// * [onTap] - A callback function to be called when the day tile is tapped.
 Widget kDayTileBuilder(
+  BuildContext context,
   DayModel dayModel,
   CalendarTheme theme,
   ValueChanged<DateTime> onTap,
@@ -50,7 +52,7 @@ Widget kDayTileBuilder(
     textStyle: combinedTextStyle,
     backgroundColor: dayModel.isInRange ? theme.inRangeColor : null,
     color: dayModel.isSelected ? theme.selectedColor : null,
-    text: dayModel.date.day.toString(),
+    text: DateFormat('d', Localizations.localeOf(context).languageCode).format(dayModel.date),
     value: dayModel.date,
     onTap: dayModel.isSelectable ? onTap : null,
     radius: BorderRadiusDirectional.horizontal(
@@ -387,6 +389,7 @@ class EnrichedMonthWrapWidget extends StatelessWidget {
             days: days,
             delta: delta,
             dayTileBuilder: (dayModel) => kDayTileBuilder(
+              context,
               dayModel,
               theme,
               onDateChanged,
