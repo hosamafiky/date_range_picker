@@ -54,12 +54,12 @@ Widget kDayTileBuilder(
     value: dayModel.date,
     onTap: dayModel.isSelectable ? onTap : null,
     radius: BorderRadiusDirectional.horizontal(
-      end: Radius.circular(dayModel.isEnd && dayModel.isInRange ? 0 : theme.radius),
-      start: Radius.circular(dayModel.isStart && dayModel.isInRange ? 0 : theme.radius),
+      start: Radius.circular(dayModel.isEnd && dayModel.isInRange ? 0 : theme.radius),
+      end: Radius.circular(dayModel.isStart && dayModel.isInRange ? 0 : theme.radius),
     ),
     backgroundRadius: BorderRadiusDirectional.horizontal(
-      end: Radius.circular(dayModel.isStart ? theme.radius : 0),
-      start: Radius.circular(dayModel.isEnd ? theme.radius : 0),
+      start: Radius.circular(dayModel.isStart ? theme.radius : 0),
+      end: Radius.circular(dayModel.isEnd ? theme.radius : 0),
     ),
   );
 }
