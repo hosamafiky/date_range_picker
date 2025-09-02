@@ -250,7 +250,7 @@ class DateRangePickerWidgetState extends State<DateRangePickerWidget> {
   @override
   Widget build(BuildContext context) {
     Widget child = Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(
           width: widget.theme.tileSize * 7 * (widget.doubleMonth ? 2 : 1),
@@ -268,6 +268,7 @@ class DateRangePickerWidgetState extends State<DateRangePickerWidget> {
         ),
         IntrinsicHeight(
           child: Row(
+            mainAxisAlignment: widget.doubleMonth ? MainAxisAlignment.start : MainAxisAlignment.center,
             children: [
               EnrichedMonthWrapWidget(
                 theme: widget.theme,
