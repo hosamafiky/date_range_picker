@@ -53,15 +53,15 @@ Widget kDayTileBuilder(
     text: dayModel.date.day.toString(),
     value: dayModel.date,
     onTap: dayModel.isSelectable ? onTap : null,
-    radius: BorderRadius.horizontal(
-      left: Radius.circular(
+    radius: BorderRadiusDirectional.horizontal(
+      start: Radius.circular(
           dayModel.isEnd && dayModel.isInRange ? 0 : theme.radius),
-      right: Radius.circular(
+      end: Radius.circular(
           dayModel.isStart && dayModel.isInRange ? 0 : theme.radius),
     ),
-    backgroundRadius: BorderRadius.horizontal(
-      left: Radius.circular(dayModel.isStart ? theme.radius : 0),
-      right: Radius.circular(dayModel.isEnd ? theme.radius : 0),
+    backgroundRadius: BorderRadiusDirectional.horizontal(
+      start: Radius.circular(dayModel.isStart ? theme.radius : 0),
+      end: Radius.circular(dayModel.isEnd ? theme.radius : 0),
     ),
   );
 }

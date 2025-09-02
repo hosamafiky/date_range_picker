@@ -37,8 +37,8 @@ class QuickSelectorWidget extends StatelessWidget {
                   width: 4,
                   height: 20,
                   decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.horizontal(
-                        right: Radius.circular(2)),
+                    borderRadius: const BorderRadiusDirectional.horizontal(
+                        end: Radius.circular(2)),
                     color: quickDateRange.dateRange == selectedDateRange
                         ? theme.selectedQuickDateRangeColor ??
                             Theme.of(context).primaryColor
