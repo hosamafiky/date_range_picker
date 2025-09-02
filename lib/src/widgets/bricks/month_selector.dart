@@ -40,7 +40,7 @@ class MonthSelectorAndDoubleIndicator extends StatelessWidget {
         IconButton(
           onPressed: onPrevious,
           splashRadius: 16,
-          icon: const Icon(Icons.keyboard_arrow_left),
+          icon: const Icon(Icons.arrow_back_ios),
         ),
         Expanded(
           child: Text(
@@ -62,7 +62,7 @@ class MonthSelectorAndDoubleIndicator extends StatelessWidget {
         IconButton(
           splashRadius: 16,
           onPressed: onNext,
-          icon: const Icon(Icons.keyboard_arrow_right),
+          icon: const Icon(Icons.arrow_forward_ios),
         ),
       ],
     );
