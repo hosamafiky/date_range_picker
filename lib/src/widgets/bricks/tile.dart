@@ -55,7 +55,7 @@ class DayTileWidget extends StatelessWidget {
       borderRadius: backgroundRadius,
       color: backgroundColor ?? Colors.transparent,
       child: InkWell(
-        borderRadius: radius,
+        splashColor: Colors.transparent,
         onTap: () => onTap?.call(value),
         child: Container(
           width: size,
